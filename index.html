@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天津市津南区金盾消防器材维修中心</title>
+    <style>
+        body {
+            font-family: '微软雅黑', Arial, sans-serif;
+            background: linear-gradient(135deg, #e6f7ff, #fff0f0);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background: #f8f8f8;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #c00;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .services {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .service-box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 280px;
+            transition: transform 0.3s;
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-title {
+            color: #c00;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .time-display {
+            text-align: center;
+            font-size: 1.2em;
+            color: #555;
+            margin: 20px 0;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .call-btn {
+            background: #c00;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1em;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+        }
+
+        .call-btn:hover {
+            background: #e60000;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #f0f0f0;
+            color: #666;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .service-box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>天津市津南区金盾消防器材维修中心</h1>
+            <p class="time-display" id="timeDisplay"></p>
+        </header>
+
+        <div class="services">
+            <div class="service-box">
+                <div class="service-title">🔥 消防维保</div>
+                <p>提供专业消防系统维护保养服务，确保设备正常运行，预防安全隐患。</p>
+            </div>
+            <div class="service-box">
+                <div class="service-title">🔧 消防检测维修</div>
+                <p>具备专业资质的检测团队，提供全面的消防设备检测与故障维修服务。</p>
+            </div>
+            <div class="service-box">
+                <div class="service-title">📊 消防安全评估</div>
+                <p>根据国家标准进行消防安全评估，出具专业评估报告，提升安全等级。</p>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="call-btn" onclick="window.location.href='tel:13312000662'">
+                点击拨打电话 1
+            </button>
+            <button class="call-btn" onclick="window.location.href='tel:15342159288'">
+                点击拨打电话 2
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 天津市津南区金盾消防器材维修中心 版权所有</p>
+    </footer>
+
+    <script>
+        // 动态时间显示
+        function updateTime() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            };
+            document.getElementById('timeDisplay').innerHTML = 
+                `${now.toLocaleDateString('zh-CN', options)}`;
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>
